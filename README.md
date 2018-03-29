@@ -29,28 +29,23 @@ io:
     # Internal pull-up/pull-down resistors will be configured accordingly.
     #
 
-    LED.R: 10   # channels for controlling LED colors
-    LED.G: 11
-    LED.B: 12
+    16: LED.R       # channels for controlling LED colors
+    18: LED.G
+    22: LED.B
 
-    E.0:   15      # channels for displaying portal energy levels
-    E.1:   16
-    E.2:   17
-    E.3:   18
-    E.4:   19
-    E.5:   20
-    E.6:   21
-    E.7:   22
-    E.8:   23
-    E.9:   24
+    24: E.8         # channels for resonator health info
+    26: E.4
+    36: E.2
+    38: E.1
 
-    LEVEL.4: 7      # BCD code for resonator level digital number display
-    LEVEL.2: 8
-    LEVEL.1: 9
+    19: LEVEL.4     # channels for resonator level numbers
+    21: LEVEL.2
+    23: LEVEL.1
 
-    _BCD.4: 3
-    _BCD.2: 4
-    _BCD.1: 5
+    11: _BCD.4      # BCD selector for scanning mode
+    13: _BCD.2
+    15: _BCD.1
+
 
 static:
     # List of static rules, each rule are defined with a set of tags. When
@@ -74,6 +69,7 @@ static:
         LED.B: True
         # if LED intensity increases, an additional channel for dimming may
         # be desired.
+
 
 scan:
     # scan rules. Information will be output'ed continously. Each
@@ -123,27 +119,55 @@ scan:
             LEVEL.1: True
 
         HEALTH(0,10):
-            E.0: True
             E.1: False 
             E.2: False 
-            E.3: False 
             E.4: False 
-            E.5: False 
-            E.6: False 
-            E.7: False 
             E.8: False 
-            E.9: False 
         HEALTH(10,20):
-            E.0: True
+            E.1: True
+            E.2: False 
+            E.4: False 
+            E.8: False 
+        HEALTH(20,30):
+            E.1: False 
+            E.2: True 
+            E.4: False 
+            E.8: False 
+        HEALTH(30,40):
+            E.1: True
+            E.2: True 
+            E.4: False 
+            E.8: False 
+        HEALTH(40,50):
+            E.1: False 
+            E.2: False 
+            E.4: True 
+            E.8: False 
+        HEALTH(50,60):
             E.1: True 
             E.2: False 
-            E.3: False 
-            E.4: False 
-            E.5: False 
-            E.6: False 
-            E.7: False 
+            E.4: True 
             E.8: False 
-            E.9: False 
+        HEALTH(60,70):
+            E.1: False 
+            E.2: True 
+            E.4: True
+            E.8: False 
+        HEALTH(70,80):
+            E.1: True
+            E.2: True 
+            E.4: True 
+            E.8: False 
+        HEALTH(80,90):
+            E.1: False 
+            E.2: False 
+            E.4: False 
+            E.8: True 
+        HEALTH(90,100):
+            E.1: True
+            E.2: False 
+            E.4: False 
+            E.8: True 
 
 
 ```
