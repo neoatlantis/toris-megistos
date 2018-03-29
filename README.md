@@ -30,16 +30,16 @@ io:
     LED.G: 11
     LED.B: 12
 
-    ENERGY.0:   15      # channels for displaying portal energy levels
-    ENERGY.1:   16
-    ENERGY.2:   17
-    ENERGY.3:   18
-    ENERGY.4:   19
-    ENERGY.5:   20
-    ENERGY.6:   21
-    ENERGY.7:   22
-    ENERGY.8:   23
-    ENERGY.9:   24
+    E.0:   15      # channels for displaying portal energy levels
+    E.1:   16
+    E.2:   17
+    E.3:   18
+    E.4:   19
+    E.5:   20
+    E.6:   21
+    E.7:   22
+    E.8:   23
+    E.9:   24
 
     LEVEL.4: 7      # BCD code for resonator level digital number display
     LEVEL.2: 8
@@ -120,27 +120,27 @@ scan:
             LEVEL.1: True
 
         HEALTH(0,10):
-            ENERGEY.0: True
-            ENERGEY.1: False 
-            ENERGEY.2: False 
-            ENERGEY.3: False 
-            ENERGEY.4: False 
-            ENERGEY.5: False 
-            ENERGEY.6: False 
-            ENERGEY.7: False 
-            ENERGEY.8: False 
-            ENERGEY.9: False 
+            E.0: True
+            E.1: False 
+            E.2: False 
+            E.3: False 
+            E.4: False 
+            E.5: False 
+            E.6: False 
+            E.7: False 
+            E.8: False 
+            E.9: False 
         HEALTH(10,20):
-            ENERGEY.0: True
-            ENERGEY.1: True 
-            ENERGEY.2: False 
-            ENERGEY.3: False 
-            ENERGEY.4: False 
-            ENERGEY.5: False 
-            ENERGEY.6: False 
-            ENERGEY.7: False 
-            ENERGEY.8: False 
-            ENERGEY.9: False 
+            E.0: True
+            E.1: True 
+            E.2: False 
+            E.3: False 
+            E.4: False 
+            E.5: False 
+            E.6: False 
+            E.7: False 
+            E.8: False 
+            E.9: False 
 
 
 ```
