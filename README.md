@@ -17,6 +17,9 @@ any updates in its source will result in changes at the outputs.
 
 ## Rules
 
+Refer to [https://pinout.xyz](https://pinout.xyz) for Rasberry Pi GPIO
+numbering.
+
 ```yaml
 io:
     # GPIO aliases. Must be positive or negative integers, where, a positive
